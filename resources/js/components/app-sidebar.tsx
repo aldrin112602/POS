@@ -4,7 +4,7 @@ import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
+import { Bell, BookOpen, Folder, Gift, Heart, History, LayoutGrid, ShoppingCart, Star, Mail, Phone } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
@@ -13,18 +13,52 @@ const mainNavItems: NavItem[] = [
         href: '/dashboard',
         icon: LayoutGrid,
     },
-];
-
-const footerNavItems: NavItem[] = [
     {
-        title: 'Repository',
-        href: 'https://github.com/laravel/react-starter-kit',
-        icon: Folder,
+        title: 'Browse Products',
+        href: '/browse-products',
+        icon: ShoppingCart,
     },
     {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits',
-        icon: BookOpen,
+        title: 'Loyalty Points',
+        href: '/loyalty-points',
+        icon: Gift,
+    },
+    {
+        title: 'Purchase History',
+        href: '/purchase-history',
+        icon: History,
+    },
+    {
+        title: 'Wishlist',
+        href: '/wishlist',
+        icon: Heart,
+    },
+    {
+        title: 'Promotions',
+        href: '/promotions',
+        icon: Gift,
+    },
+    {
+        title: 'Notifications',
+        href: '/notifications',
+        icon: Bell,
+    },
+    {
+        title: 'Rate Experience',
+        href: '/rate-experience',
+        icon: Star,
+    },
+];
+const footerNavItems: NavItem[] = [
+    {
+        title: 'Email Us',
+        href: 'mailto:caballeroaldrin02@gmail.com',
+        icon: Mail,
+    },
+    {
+        title: 'Call Us',
+        href: 'tel:+639512793354',
+        icon: Phone,
     },
 ];
 
