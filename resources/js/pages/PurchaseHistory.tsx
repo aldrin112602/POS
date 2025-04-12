@@ -145,7 +145,7 @@ const mockOrders = [
     ],
     address: "123 Main Street, Apt 4B, Manila",
     paymentMethod: "GCash",
-    paymentProof: "/api/placeholder/200/300", // GCash receipt
+    paymentProof: "https://i.pinimg.com/736x/e7/9d/d1/e79dd102b35213f815291e0fb4bd12df.jpg", // GCash receipt
     deliveryFee: 50.00,
     subtotal: 450.00,
     discount: 50.00,
@@ -401,8 +401,8 @@ const mockOrders = [
 // Payment methods
 const paymentMethods = [
   { id: 'credit_card', name: 'Credit/Debit Card', icon: <CreditCard className="h-4 w-4" /> },
-  { id: 'gcash', name: 'GCash', icon: <img src="/api/placeholder/20/20" className="h-4 w-4" alt="GCash" /> },
-  { id: 'paypal', name: 'PayPal', icon: <img src="/api/placeholder/20/20" className="h-4 w-4" alt="PayPal" /> },
+  { id: 'gcash', name: 'GCash', icon: <img src="https://play-lh.googleusercontent.com/QNP0Aj2hyumAmYiWVAsJtY2LLTQnzHxdW7-DpwFUFNkPJjgRxi-BXg7A4yI6tgYKMeU" className="h-4 w-4" alt="GCash" /> },
+  { id: 'paypal', name: 'PayPal', icon: <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtHhR_wvf104ZuFuSOgZnqDsjHzCKrg8qOcw&s" className="h-4 w-4" alt="PayPal" /> },
   { id: 'cod', name: 'Cash on Delivery', icon: <ShoppingBag className="h-4 w-4" /> }
 ];
 
@@ -758,10 +758,10 @@ export default function PurchaseHistory() {
         
         {/* Order Detail Modal */}
         <Dialog open={isOrderDetailOpen} onOpenChange={setIsOrderDetailOpen}>
-          <DialogContent className="sm:max-w-3xl">
+          <DialogContent className="sm:max-w-3xl max-h-[90vh] overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="flex items-center justify-between text-xl">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 mt-5">
                   <span>Order {selectedOrder?.id}</span>
                   {selectedOrder?.status === 'Processing' && (
                     <span className="rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300">
@@ -950,8 +950,8 @@ export default function PurchaseHistory() {
                   <h4 className="font-medium text-gray-900 dark:text-white">Payment Method</h4>
                   <div className="mt-1 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                     {selectedOrder?.paymentMethod.includes('Credit Card') && <CreditCard className="h-4 w-4" />}
-                    {selectedOrder?.paymentMethod.includes('GCash') && <img src="/api/placeholder/20/20" className="h-4 w-4" alt="GCash" />}
-                    {selectedOrder?.paymentMethod.includes('PayPal') && <img src="/api/placeholder/20/20" className="h-4 w-4" alt="PayPal" />}
+                    {selectedOrder?.paymentMethod.includes('GCash') && <img src="https://play-lh.googleusercontent.com/QNP0Aj2hyumAmYiWVAsJtY2LLTQnzHxdW7-DpwFUFNkPJjgRxi-BXg7A4yI6tgYKMeU" className="h-4 w-4" alt="GCash" />}
+                    {selectedOrder?.paymentMethod.includes('PayPal') && <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtHhR_wvf104ZuFuSOgZnqDsjHzCKrg8qOcw&s" className="h-4 w-4" alt="PayPal" />}
                     {selectedOrder?.paymentMethod.includes('Cash on Delivery') && <ShoppingBag className="h-4 w-4" />}
                     {selectedOrder?.paymentMethod}
                   </div>
