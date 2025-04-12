@@ -15,6 +15,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('browse-products', function () {
         return Inertia::render('BrowseProducts');
     })->name('browse-products');
+
+    Route::get('loyalty-points', function () {
+        return Inertia::render('LoyaltyPoints');
+    })->name('loyalty-points');
+
+    Route::get('purchase-history', function () {
+        return Inertia::render('PurchaseHistory');
+    })->name('purchase-history');
 });
 
 require __DIR__.'/settings.php';
