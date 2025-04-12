@@ -1,6 +1,7 @@
+import { useFirstname } from '@/hooks/use-firstname';
 import AppLayout from '@/layouts/app-layout';
-import { type BreadcrumbItem } from '@/types';
-import { Head } from '@inertiajs/react';
+import { type BreadcrumbItem, type SharedData } from '@/types';
+import { Head, usePage } from '@inertiajs/react';
 import { useEffect, useState } from 'react';
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -12,6 +13,8 @@ const breadcrumbs: BreadcrumbItem[] = [
 
 export default function Dashboard() {
     const [isLoaded, setIsLoaded] = useState(false);
+    const { auth } = usePage<SharedData>().props;
+    const getFirstname = useFirstname();
 
     useEffect(() => {
         setIsLoaded(true);
@@ -21,9 +24,11 @@ export default function Dashboard() {
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Dashboard" />
             <div
-                className={`flex h-full flex-1 flex-col gap-6  bg-gradient-to-br from-blue-50 to-indigo-50 p-6 transition-all duration-500 ease-in-out dark:from-gray-900 dark:to-indigo-950 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                className={`flex h-full flex-1 flex-col gap-6 bg-gradient-to-br from-blue-50 to-indigo-50 p-6 transition-all duration-500 ease-in-out dark:from-gray-900 dark:to-indigo-950 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
             >
-                <h1 className="mb-2 text-3xl font-bold text-indigo-800 transition-all duration-300 dark:text-indigo-300">Welcome Back Aldrin!</h1>
+                <h1 className="mb-2 text-3xl font-bold text-indigo-800 transition-all duration-300 dark:text-indigo-300">
+                    Welcome Back {getFirstname(auth.user?.name)}!
+                </h1>
 
                 <div className="grid auto-rows-min gap-6 md:grid-cols-3">
                     {/* Stats Cards */}
