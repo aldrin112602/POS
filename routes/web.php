@@ -31,6 +31,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('promotions', function () {
         return Inertia::render('Promotions');
     })->name('promotions');
+
+    Route::get('notifications', function () {
+        return Inertia::render('Notifications');
+    })->name('notifications');
 });
 
 require __DIR__.'/settings.php';
