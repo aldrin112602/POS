@@ -27,6 +27,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('wishlist', function () {
         return Inertia::render('Wishlist');
     })->name('wishlist');
+
+    Route::get('promotions', function () {
+        return Inertia::render('Promotions');
+    })->name('promotions');
 });
 
 require __DIR__.'/settings.php';
