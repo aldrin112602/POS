@@ -14,8 +14,8 @@ import { useEffect, useState } from 'react';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
-        title: 'Browse Products',
-        href: '/products',
+        title: 'Wishlist',
+        href: '/wishlist',
     },
 ];
 
@@ -95,7 +95,7 @@ const mockProducts = [
     },
 ];
 
-export default function BrowseProducts() {
+export default function Wishlist() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [products, setProducts] = useState(mockProducts);
     const [searchTerm, setSearchTerm] = useState('');
@@ -157,12 +157,12 @@ export default function BrowseProducts() {
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
-            <Head title="Browse Products" />
+            <Head title="Wishlist" />
             <div
-                className={`flex h-full flex-1 flex-col gap-6 bg-gradient-to-br p-6 from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-purple-950 transition-all duration-500 ease-in-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                className={`flex h-full flex-1 flex-col gap-6 p-6 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-purple-950 transition-all duration-500 ease-in-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
             >
                 <header className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                    <h1 className="text-3xl font-bold text-purple-800 dark:text-purple-300">Browse Products</h1>
+                    <h1 className="text-3xl font-bold text-purple-800 dark:text-purple-300">Wishlist</h1>
 
                     <div className="flex flex-col gap-3 md:flex-row md:items-center">
                         {/* Search Bar */}

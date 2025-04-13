@@ -533,10 +533,10 @@ export default function PurchaseHistory() {
   return (
     <AppLayout breadcrumbs={breadcrumbs}>
       <Head title="Purchase History" />
-      <div className={`flex h-full flex-1 flex-col gap-6 rounded-xl bg-white p-6 shadow-sm dark:bg-gray-800 transition-all duration-500 ease-in-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`flex h-full flex-1 flex-col gap-6 p-6 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-purple-950 transition-all duration-500 ease-in-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <header className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Purchase History</h1>
+            <h1 className="text-2xl font-bold text-purple-800 dark:text-purple-300">Purchase History</h1>
             <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">View and track all your past orders</p>
           </div>
           

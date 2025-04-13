@@ -6,9 +6,7 @@ import {
   Gift, 
   ShoppingBag, 
   TrendingUp, 
-  Coffee, 
-  Truck, 
-  Cake, 
+  Coffee,  
   Award,
   Zap,
   AlertCircle,
@@ -132,7 +130,7 @@ export default function LoyaltyPoints() {
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Loyalty Points" />
-            <div className={`flex h-full flex-1 flex-col gap-6 rounded-xl p-6 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-purple-950 transition-all duration-500 ease-in-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`flex h-full flex-1 flex-col gap-6 p-6 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-purple-950 transition-all duration-500 ease-in-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
                 <header className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                     <div>
                         <h1 className="text-3xl font-bold text-purple-800 dark:text-purple-300">Loyalty Program</h1>

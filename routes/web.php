@@ -23,6 +23,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('purchase-history', function () {
         return Inertia::render('PurchaseHistory');
     })->name('purchase-history');
+
+    Route::get('wishlist', function () {
+        return Inertia::render('Wishlist');
+    })->name('wishlist');
 });
 
 require __DIR__.'/settings.php';

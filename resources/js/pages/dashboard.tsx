@@ -24,9 +24,9 @@ export default function Dashboard() {
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Dashboard" />
             <div
-                className={`flex h-full flex-1 flex-col gap-6 bg-gradient-to-br from-blue-50 to-indigo-50 p-6 transition-all duration-500 ease-in-out dark:from-gray-900 dark:to-indigo-950 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+                className={`flex h-full flex-1 flex-col gap-6 p-6 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-gray-900 dark:to-purple-950 transition-all duration-500 ease-in-out ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
             >
-                <h1 className="mb-2 text-3xl font-bold text-indigo-800 transition-all duration-300 dark:text-indigo-300">
+                <h1 className="mb-2 text-3xl font-bold transition-all duration-300 text-purple-800 dark:text-purple-300">
                     Welcome Back {getFirstname(auth.user?.name)}!
                 </h1>
 
@@ -63,7 +63,7 @@ export default function Dashboard() {
                 {/* Purchases and Recommendations Section */}
                 <div className="relative flex-1 overflow-hidden rounded-xl border-0 bg-white/80 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl md:min-h-min dark:bg-gray-800/60">
                     <div className="space-y-6 p-6">
-                        <h2 className="border-b border-gray-200 pb-3 text-xl font-semibold text-gray-800 dark:border-gray-700 dark:text-gray-200">
+                        <h2 className="border-b border-gray-200 pb-3 text-xl font-semibolddark:border-gray-700  text-purple-800 dark:text-purple-300">
                             Recent Purchases
                         </h2>
                         <div className="space-y-3">
@@ -82,7 +82,7 @@ export default function Dashboard() {
                             </div>
                         </div>
 
-                        <h2 className="mt-8 border-b border-gray-200 pb-3 text-xl font-semibold text-gray-800 dark:border-gray-700 dark:text-gray-200">
+                        <h2 className="mt-8 border-b border-gray-200 pb-3 text-xl font-semibold dark:border-gray-700 text-purple-800 dark:text-purple-300">
                             Recommended for You
                         </h2>
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
